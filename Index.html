@@ -19,7 +19,26 @@
       <p class="lead">Ejercicio Nº 3 | Practica DOM | Javascript</p>
       <h1 class="display-4">Lista de tareas</h1>
     </header>
-    <main></main>
+    <main class="d-flex align-items-center flex-column">
+      <section class="container d-flex flex-column align-items-center mt-3" >
+        <h2 class="lead">Por favor ingrese una tarea:</h2>
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control-lg"
+            name="tarea"
+            id="tarea"            
+            placeholder="Ej. Hacer las compras"
+          />
+          <button class="btn btn-primary m-2">submit</button>
+        </div>
+      </section>
+      <section class="container w-75 d-flex justify-content-center">
+        <ul><h3 class="display-5">Lista</h3>
+          <li>Tarea 1 <button class="btn btn-outline-danger">X</button> </li>
+        </ul>
+      </section>
+    </main>
     <footer class="text-center p-5 shadow-lg">
       &copy; Todos los derechos reservados
       <b>

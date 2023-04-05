@@ -7,4 +7,15 @@ main {
   flex-grow: 1;
 }
 
-
+li {
+  color: rgb(255, 255, 255);
+  background-color: rgba(48, 117, 122, 0.552);
+  list-style: none;
+  width: 350px;
+  max-width: 500px;
+  font-size: larger;
+  border-radius: 25px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+}
