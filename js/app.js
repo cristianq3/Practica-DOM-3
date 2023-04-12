@@ -13,6 +13,7 @@ function agregarTarea(e) {
   e.preventDefault();
   // Obteniendo los datos de la lista.
   let tareaNueva = document.getElementById("tarea").value;
+  lista.className = "d-block";
 
   if (tareaNueva != "") {
     //Agregar la variable tareaNueva a la ul llamada lista.
@@ -22,7 +23,14 @@ function agregarTarea(e) {
     // Crear el boton cerrar
     let botonCerrar = document.createElement("button");
     botonCerrar.innerHTML = "X";
-    botonCerrar.className = "btn ms-auto btnCerrar";
+    botonCerrar.className = "btn ms-auto btnCerrar btn-outline-danger";
+    botonCerrar.addEventListener("mouseover", function() {
+			botonCerrar.setAttribute("title", "Eliminar Tarea");
+		});
+
+    
+
+
 
     // Insetar el boton dentro del li
     nuevoLi.appendChild(botonCerrar);
