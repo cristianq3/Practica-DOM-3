@@ -10,6 +10,12 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css
+"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/style.css" />
 
     <title>Lista de tareas</title>
@@ -19,11 +25,15 @@
       <p class="lead">Ejercicio Nº 3 | Practica DOM | Javascript</p>
       <h1 class="display-4">Lista de tareas</h1>
     </header>
-    <main class="d-flex flex-wrap container justify-content-around">
-      <section class="formsecc">
-        <h2 class="lead">Por favor ingrese una tarea:</h2>
+    <main
+      class="d-flex flex-wrap container justify-content-center align-items-center flex-column"
+    >
+      <section class="formsecc pt-4 d-flex flex-column flex-md-row justify-content-around align-items-center">
+        <h4 class=" mx-3">Por favor ingrese una tarea:</h4>
 
-        <form class="formulario">
+        <form
+          class="formulario d-flex align-items-center flex-column flex-md-row"
+        >
           <input
             type="text"
             class="form-control-lg"
@@ -31,16 +41,12 @@
             id="tarea"
             placeholder="Ej. Hacer las compras"
           />
-          <button class="btn btn-primary m-2" type="submit">
-            Cargar Tarea
-          </button>
+          <button class="btn btn-primary m-2" type="submit">+</button>
         </form>
       </section>
       <section>
         <h3 class="display-5">Lista</h3>
-        <ul>
-          
-        </ul>
+        <ul></ul>
       </section>
     </main>
     <footer class="text-center p-5 shadow-lg">
@@ -60,6 +66,9 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js
+    "></script>
     <script src="/js/app.js"></script>
   </body>
 </html>

@@ -33,11 +33,15 @@ function agregarTarea(e) {
 
     lista.appendChild(nuevoLi);
 
-    alert("Se agregó la tarea a la lista");
+    Swal.fire({
+      html: "La tarea se añadirá de su lista",
+    });
 
     formulario.reset();
   } else {
-    alert("Por favor ingrese un texto para agregar");
+    Swal.fire({
+      html: `Por favor <b>ingrese una tarea </b> para poder agrerarla a su lista`,
+    });
   }
   console.log(tareaNueva);
 }
@@ -47,6 +51,12 @@ function eliminarTarea() {
 
   elementoEliminado.remove();
 
+  tarea = this.parentNode.innerText.slice(0, -1);
+
+  console.log(tarea);
+
   console.log("Tarea eliminada");
-  alert("Se eliminó la tarea");
+  Swal.fire({
+    html: `La tarea <b> ${tarea} </b> eliminó de lista`,
+  });
 }

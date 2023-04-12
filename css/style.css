@@ -5,10 +5,22 @@ body {
 }
 main {
   flex-grow: 1;
+  border: 1px solid white;
+  border-radius: 25px;
+  background-image: linear-gradient(135deg, #06290a 0%, #0f5c53 100%);
+}
+
+.btn-primary {
+  background-color: #1c5775;
+}
+.btn-primary:hover {
+  background-color: #ffffff;
+  color: #06290a;
 }
 
 li {
   color: rgb(255, 255, 255);
+
   background-color: rgba(2, 84, 65, 0.849);
   list-style: none;
   max-width: 500px;
@@ -26,4 +38,54 @@ form {
 }
 .formsecc {
   max-width: fit-content;
+}
+
+ul {
+  border: solid 1px rgb(6, 87, 103);
+  border-radius: 25px;
+  padding: 15px;
+
+  background-image: linear-gradient(135deg, #06290a 0%, #1c5775 100%);
+  display: flex;
+  flex-wrap: wrap;
+  display: none;
+}
+
+li {
+  flex-basis: calc(
+    20% - 10px
+  ); /* ajusta el tamaño de cada elemento en la lista */
+  margin: 5px;
+  background-color: #dddddd25;
+  text-align: center;
+  list-style: none;
+}
+
+/*Media Queries
+*/
+
+@media (max-width: 600px) {
+  li {
+    margin: 5px;
+    background-color: #dddddd25;
+    text-align: center;
+    list-style: none;
+    font-size: xx-small;
+    display: flex;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  main {
+    flex-grow: 1;
+    border: none;
+    justify-content: center;
+    align-items: center;
+   
+   
+  }
 }
