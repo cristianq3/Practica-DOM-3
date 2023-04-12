@@ -9,13 +9,20 @@ main {
 
 li {
   color: rgb(255, 255, 255);
-  background-color: rgba(48, 117, 122, 0.552);
+  background-color: rgba(2, 84, 65, 0.849);
   list-style: none;
-  width: 350px;
   max-width: 500px;
-  font-size: larger;
+  width: 225px;
+  font-size: small;
+
   border-radius: 25px;
   padding: 12px;
   display: flex;
-  justify-content: space-between;
+}
+
+form {
+  max-width: fit-content;
+}
+.formsecc {
+  max-width: fit-content;
 }

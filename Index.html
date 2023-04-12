@@ -19,23 +19,30 @@
       <p class="lead">Ejercicio Nº 3 | Practica DOM | Javascript</p>
       <h1 class="display-4">Lista de tareas</h1>
     </header>
-    <main class="d-flex align-items-center flex-column">
-      <section class="container d-flex flex-column align-items-center mt-3" >
+    <main class="d-flex flex-wrap container justify-content-around">
+      <section class="formsecc">
         <h2 class="lead">Por favor ingrese una tarea:</h2>
-        <div class="mb-3">
+
+        <form class="formulario">
           <input
             type="text"
             class="form-control-lg"
             name="tarea"
-            id="tarea"            
+            id="tarea"
             placeholder="Ej. Hacer las compras"
           />
-          <button class="btn btn-primary m-2">submit</button>
-        </div>
+          <button class="btn btn-primary m-2" type="submit">
+            Cargar Tarea
+          </button>
+        </form>
       </section>
-      <section class="container w-75 d-flex justify-content-center">
-        <ul><h3 class="display-5">Lista</h3>
-          <li>Tarea 1 <button class="btn btn-outline-danger">X</button> </li>
+      <section>
+        <h3 class="display-5">Lista</h3>
+        <ul>
+          <li>
+            <p>Tarea 1</p>
+            <button class="btn ms-auto" name="btnEliminar">X</button>
+          </li>
         </ul>
       </section>
     </main>
