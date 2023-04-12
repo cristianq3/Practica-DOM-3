@@ -3,14 +3,10 @@
 //Obtener los datos del form
 
 let formulario = document.querySelector("form");
-let lista = document.getElementsByTagName("ul");
-let btnEliminar = document.querySelector(".btnCerrar");
 
-btnEliminar.addEventListener("click", eliminarTarea);
+let lista = document.querySelector("ul");
 
 formulario.addEventListener("submit", agregarTarea);
-
-console.log(formulario);
 
 // Crear la funcion para agregar a la lista los elementos.
 function agregarTarea(e) {
@@ -18,23 +14,39 @@ function agregarTarea(e) {
   // Obteniendo los datos de la lista.
   let tareaNueva = document.getElementById("tarea").value;
 
-  //Agregar la variable tareaNueva a la ul llamada lista.
+  if (tareaNueva != "") {
+    //Agregar la variable tareaNueva a la ul llamada lista.
+    //Crear el elemento li
+    let nuevoLi = document.createElement("li");
+    nuevoLi.innerHTML = tareaNueva;
+    // Crear el boton cerrar
+    let botonCerrar = document.createElement("button");
+    botonCerrar.innerHTML = "X";
+    botonCerrar.className = "btn ms-auto btnCerrar";
 
+    // Insetar el boton dentro del li
+    nuevoLi.appendChild(botonCerrar);
 
+    botonCerrar.addEventListener("click", eliminarTarea);
 
+    // Agregar la el elemento <li> a la lista de tareas.
 
+    lista.appendChild(nuevoLi);
 
+    alert("Se agregó la tarea a la lista");
 
+    formulario.reset();
+  } else {
+    alert("Por favor ingrese un texto para agregar");
+  }
   console.log(tareaNueva);
-  // Agregar la el elemento <li> a la lista de tareas.
-
-
-
-  alert("Se agregó la tarea a la lista");
-  formulario.reset();
 }
 
 function eliminarTarea() {
-    console.log("Tarea eliminada")
-    alert("Tarea ELiminada")
+  let elementoEliminado = this.parentNode;
+
+  elementoEliminado.remove();
+
+  console.log("Tarea eliminada");
+  alert("Se eliminó la tarea");
 }
